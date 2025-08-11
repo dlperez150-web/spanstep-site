@@ -1,124 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Spanstep — Small steps. Steady progress.</title>
-  <meta name="description" content="Spanstep breaks big projects into capacity‑aware, 15–45‑minute steps. Start the next one with one click, get an automatic micro‑rescue when you stall, and wake up to a plan that fits what actually happened." />
-  <!-- Brand font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wdth,wght@85..125,100..800&display=swap" rel="stylesheet">
-  <style>
-    /* ---- Dark theme tokens ---- */
-    :root{
-      --bg:#0b1120;          /* page background */
-      --surface:#111827;     /* card background */
-      --surface-2:#0f172a;   /* header/footer/muted surface */
-      --ink:#e5e7eb;         /* primary text */
-      --muted:#a3aed1;       /* secondary text */
-      --divider:#1f2a44;     /* borders */
-      --brand:#22B0A2;       /* teal accent from brand */
-      --brand-2:#4C6FFF;     /* indigo secondary */
-      --brand-deep:#0F766E;  /* deep teal for buttons */
-      --brand-deep-hover:#0B6C64;
-      --ok:#7BDAA7;
-      --radius:16px;
-      --shadow: 0 10px 40px rgba(0,0,0,.45);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Lexend", Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: radial-gradient(1200px 600px at 10% -10%, #0f1831 0%, var(--bg) 55%) fixed;
-      color: var(--ink);
-      line-height:1.55;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    .wrap{ max-width:1040px; margin:0 auto; padding:40px 20px 80px; }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; }
-    .logo{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; color:var(--ink); font-size:20px; }
-    .logo-mark{ width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:0 8px 24px rgba(0,0,0,.45);}
-    .card{ background: var(--surface); border:1px solid var(--divider); border-radius:16px; box-shadow: var(--shadow);}
-    .hero{ display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding:28px; margin-top:10px; }
-    @media (max-width: 900px){ .hero{grid-template-columns: 1fr; padding:20px;} }
-    h1{ color:var(--ink); font-size: clamp(32px, 4.3vw, 52px); line-height:1.08; margin:8px 0 10px; font-weight:800; }
-    .sub{ color: var(--muted); font-size: clamp(16px, 2.2vw, 19px); margin-bottom: 20px; }
-    .bullets{ display:grid; gap:12px; margin:12px 0 20px; }
-    .bullet{ display:flex; gap:10px; align-items:flex-start; color:var(--ink) }
-    .bullet i{ display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--brand); margin-top:8px; border:1px solid rgba(255,255,255,.08); }
-    /* STACKED form for clarity */
-    .cta{ display:grid; grid-template-columns:1fr; gap:12px; align-items:center; margin-top:16px; }
-    input, select, button{ font: inherit; }
-    .field{ width:100%; background: var(--surface-2); border:1px solid var(--divider); border-radius:12px; padding:12px 14px; color: var(--ink); outline: none; }
-    .field::placeholder{ color: #93a1c7 }
-    .field:focus{ border-color:var(--brand-deep); box-shadow:0 0 0 3px rgba(15,118,110,.35); }
-    .btn{ appearance: none; border:0; background: var(--brand-deep); color: white; font-weight:800; padding:12px 16px; border-radius:999px; cursor:pointer; box-shadow: 0 6px 24px rgba(0,0,0,.45);}
-    .btn:hover{ background: var(--brand-deep-hover); }
-    .btn:active{ transform: translateY(1px) }
-    .aside{ padding:22px; display:grid; gap:14px; background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); }
-    .aside h3{ margin:0; font-size:18px; letter-spacing:.2px; color:var(--ink); font-weight:800; }
-    .aside p{ margin:0; color:var(--muted) }
-    .foot{ margin-top:20px; color:var(--muted); font-size:13px; }
-    .pilot{ font-weight:700; color: var(--brand-2); }
-    .legal{ color:var(--muted); font-size:12px; margin-top:6px }
-    /* A little breathing room around form on mobile */
-    @media (max-width:600px){
-      .wrap{ padding-bottom: 64px; }
-    }
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spanstep — Small steps. Steady progress.</title>
+<meta name="description" content="Spanstep breaks big projects into capacity‑aware, 15–45‑minute steps. Start the next one with one click, get an automatic micro‑rescue when you stall, and wake up to a plan that fits what actually happened." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wdth,wght@85..125,100..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b1120; --surface:#111827; --surface-2:#0f172a; --ink:#e5e7eb;
+  --muted:#a3aed1; --divider:#1f2a44; --brand:#22B0A2; --brand-2:#4C6FFF;
+  --brand-deep:#0F766E; --brand-deep-hover:#0B6C64; --radius:16px; --shadow:0 10px 40px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box} html,body{height:100%}
+body{ margin:0; font-family:"Lexend",Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;
+  background: radial-gradient(1200px 600px at 10% -10%, #0f1831 0%, var(--bg) 55%) fixed; color:var(--ink); line-height:1.55;
+  -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+.wrap{ max-width:1040px; margin:0 auto; padding:40px 20px 80px; }
+header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; }
+.logo{ display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.2px; color:var(--ink); font-size:20px; }
+.logo-mark{ width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--brand),var(--brand-2)); box-shadow:0 8px 24px rgba(0,0,0,.45);}
+.card{ background:var(--surface); border:1px solid var(--divider); border-radius:16px; box-shadow:var(--shadow);}
+.hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:28px; margin-top:10px; }
+@media (max-width:900px){ .hero{ grid-template-columns:1fr; padding:20px; } }
+h1{ color:var(--ink); font-size:clamp(32px,4.3vw,52px); line-height:1.08; margin:8px 0 10px; font-weight:800; }
+.sub{ color:var(--muted); font-size:clamp(16px,2.2vw,19px); margin-bottom:20px; }
+.bullets{ display:grid; gap:12px; margin:12px 0 20px; }
+.bullet{ display:flex; gap:10px; align-items:flex-start; color:var(--ink) }
+.bullet i{ display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--brand); margin-top:8px; border:1px solid rgba(255,255,255,.08); }
+.cta{ display:grid; grid-template-columns:1fr; gap:12px; align-items:center; margin-top:16px; }
+input, select, button{ font:inherit; }
+.field{ width:100%; background:var(--surface-2); border:1px solid var(--divider); border-radius:12px; padding:12px 14px; color:var(--ink); outline:none; }
+.field::placeholder{ color:#93a1c7 }
+.field:focus{ border-color:var(--brand-deep); box-shadow:0 0 0 3px rgba(15,118,110,.35); }
+.btn{ appearance:none; border:0; background:var(--brand-deep); color:white; font-weight:800; padding:12px 16px; border-radius:999px; cursor:pointer; box-shadow:0 6px 24px rgba(0,0,0,.45); }
+.btn:hover{ background:var(--brand-deep-hover); }
+.btn:active{ transform:translateY(1px) }
+.aside{ padding:22px; display:grid; gap:14px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)); }
+.aside h3{ margin:0; font-size:18px; letter-spacing:.2px; color:var(--ink); font-weight:800; }
+.aside p{ margin:0; color:var(--muted) }
+.foot{ margin-top:20px; color:var(--muted); font-size:13px; }
+.pilot{ font-weight:700; color:var(--brand-2); }
+.legal{ color:var(--muted); font-size:12px; margin-top:6px }
+.notice{ font-size:14px; color:var(--muted); }
+.success{ display:none; margin-top:8px; color:#B8F0CF; }
+.error{ display:none; margin-top:8px; color:#FCA5A5; }
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">
-        <div class="logo-mark" aria-hidden="true"></div>
-        <div>Spanstep <span style="opacity:.6">™</span></div>
-      </div>
-    </header>
+<div class="wrap">
+  <header>
+    <div class="logo">
+      <div class="logo-mark" aria-hidden="true"></div>
+      <div>Spanstep <span style="opacity:.6">™</span></div>
+    </div>
+  </header>
 
-    <section class="card hero" aria-label="Hero">
-      <div>
-        <h1>Small steps. Steady progress.</h1>
-        <p class="sub">Break big projects into <strong>capacity‑aware, 15–45‑minute</strong> steps. Start the next one with one click; if you stall, get an automatic <strong>micro‑rescue</strong> and we’ll <strong>resize the plan</strong>. Each evening we <strong>rebuild tomorrow</strong> from today’s reality.</p>
-        <div class="bullets" role="list">
-          <div class="bullet"><i aria-hidden="true"></i><div><strong>Project sessionizer</strong> — break big projects into bite‑size, capacity‑aware steps</div></div>
-          <div class="bullet"><i aria-hidden="true"></i><div><strong>In‑session rescue</strong> — get unstuck mid‑session without typing</div></div>
-          <div class="bullet"><i aria-hidden="true"></i><div><strong>Daily auto‑repack</strong> — rebuild tomorrow from real progress, with protected breaks</div></div>
-        </div>
-
-        <form class="cta" action="#" method="post">
-          <input class="field" type="email" name="email" placeholder="Email" required aria-label="Email" />
-          <input class="field" type="text" name="project" placeholder="What project do you want help with?" aria-label="Project" />
-          <select class="field" name="session" aria-label="Preferred session length">
-            <option value="">Preferred session length</option>
-            <option>15 minutes</option>
-            <option>20 minutes</option>
-            <option>25 minutes</option>
-            <option>30 minutes</option>
-            <option>35 minutes</option>
-            <option>40 minutes</option>
-            <option>45 minutes</option>
-          </select>
-          <button class="btn" type="submit">Join the 7‑day pilot</button>
-        </form>
-
-        <div class="foot">
-          <span class="pilot">Private beta:</span> onboarding small cohorts weekly. We’ll only use your email to contact you about the pilot.
-          <div class="legal">Productivity tool, not medical advice.</div>
-        </div>
+  <section class="card hero" aria-label="Hero">
+    <div>
+      <h1>Small steps. Steady progress.</h1>
+      <p class="sub">Break big projects into <strong>capacity‑aware, 15–45‑minute</strong> steps. Start the next one with one click; if you stall, get an automatic <strong>micro‑rescue</strong> and we’ll <strong>resize the plan</strong>. Each evening we <strong>rebuild tomorrow</strong> from today’s reality.</p>
+      <div class="bullets" role="list">
+        <div class="bullet"><i aria-hidden="true"></i><div><strong>Project sessionizer</strong> — break big projects into bite‑size, capacity‑aware steps</div></div>
+        <div class="bullet"><i aria-hidden="true"></i><div><strong>In‑session rescue</strong> — get unstuck mid‑session without typing</div></div>
+        <div class="bullet"><i aria-hidden="true"></i><div><strong>Daily auto‑repack</strong> — rebuild tomorrow from real progress, with protected breaks</div></div>
       </div>
 
-      <aside class="aside card" aria-label="Pilot details">
-        <h3>What happens in the pilot?</h3>
-        <p>• <strong>Day 0:</strong> tell us your project and choose your session length (your capacity); set your working windows</p>
-        <p>• <strong>Day 1:</strong> we break the project into bite‑size steps and start your first session</p>
-        <p>• <strong>During sessions:</strong> if you stall, accept a quick rescue or resize the step; we log actuals</p>
-        <p>• <strong>Each evening:</strong> we re‑pack tomorrow based on what happened, with real breaks</p>
-      </aside>
-    </section>
-  </div>
+      <!-- On-page stacked form (AJAX to Formspree; no navigation) -->
+      <form class="cta" id="spanstep-form" action="https://formspree.io/f/mpwlbajn" method="POST" target="_self">
+        <input class="field" type="email" name="email" placeholder="Email" required aria-label="Email" />
+        <input class="field" type="text" name="project" placeholder="What project do you want help with?" aria-label="Project" />
+        <select class="field" name="session" aria-label="Preferred session length">
+          <option value="">Preferred session length</option>
+          <option>15 minutes</option><option>20 minutes</option><option>25 minutes</option>
+          <option>30 minutes</option><option>35 minutes</option><option>40 minutes</option><option>45 minutes</option>
+        </select>
+        <input type="hidden" name="_subject" value="Spanstep pilot signup" />
+        <input type="text" name="_honey" style="display:none" />
+        <button class="btn" type="submit">Join the 7‑day pilot</button>
+        <p id="ok" class="success">Thanks—you're on the list.</p>
+        <p id="err" class="error">Oops—try again in a moment.</p>
+      </form>
+
+      <div class="foot">
+        <span class="pilot">Private beta:</span> onboarding small cohorts weekly. We’ll only use your email to contact you about the pilot.
+        <div class="legal">Productivity tool, not medical advice.</div>
+      </div>
+    </div>
+
+    <aside class="aside card" aria-label="Pilot details">
+      <h3>What happens in the pilot?</h3>
+      <p>• <strong>Day 0:</strong> tell us your project and choose your session length (your capacity); set your working windows</p>
+      <p>• <strong>Day 1:</strong> we break the project into bite‑size steps and start your first session</p>
+      <p>• <strong>During sessions:</strong> if you stall, accept a quick rescue or resize the step; we log actuals</p>
+      <p>• <strong>Each evening:</strong> we re‑pack tomorrow based on what happened, with real breaks</p>
+    </aside>
+  </section>
+</div>
+<script>
+const form = document.getElementById('spanstep-form');
+const ok = document.getElementById('ok');
+const err = document.getElementById('err');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const btn = form.querySelector('button');
+  const prev = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, { method:'POST', headers:{'Accept':'application/json'}, body:new FormData(form) });
+    if (res.ok) { form.reset(); ok.style.display='block'; err.style.display='none'; btn.textContent='Added!'; }
+    else { err.style.display='block'; ok.style.display='none'; btn.disabled=false; btn.textContent=prev; }
+  } catch (_) { err.style.display='block'; ok.style.display='none'; btn.disabled=false; btn.textContent=prev; }
+});
+</script>
 </body>
 </html>
