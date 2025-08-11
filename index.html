@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spanstep — Ship big projects, gently</title>
+  <meta name="description" content="Spanstep turns big, anxious projects into 15–45-minute wins. Start the next step, get an automatic rescue when you stall, and wake up to a plan that fits your capacity." />
+  <style>
+    :root{
+      --bg:#0f1221;
+      --card:#161a2e;
+      --ink:#e9ebff;
+      --muted:#aeb3d9;
+      --accent:#7aa9ff;
+      --ok:#7BDAA7;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      background: radial-gradient(1200px 600px at 10% 0%, #1a2042 0%, var(--bg) 55%) no-repeat fixed;
+      color: var(--ink);
+      line-height:1.5;
+    }
+    .wrap{ max-width:980px; margin:0 auto; padding:48px 20px 80px; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px; }
+    .logo{ display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.2px; }
+    .logo-mark{
+      width:28px; height:28px; border-radius:8px;
+      background: conic-gradient(from 180deg at 50% 50%, #7aa9ff, #7BDAA7, #7aa9ff);
+      box-shadow: 0 0 0 2px rgba(122,169,255,.25), 0 10px 30px rgba(0,0,0,.35);
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+    }
+    .hero{ display:grid; grid-template-columns: 1.1fr .9fr; gap:28px; align-items:center; padding:28px; margin-top:10px; }
+    @media (max-width: 900px){ .hero{grid-template-columns: 1fr; padding:20px;} }
+    h1{ font-size: clamp(32px, 4.3vw, 52px); line-height:1.08; margin:8px 0 10px; }
+    .sub{ color: var(--muted); font-size: clamp(16px, 2.4vw, 19px); margin-bottom: 20px; }
+    .bullets{ display:grid; gap:12px; margin:12px 0 20px; }
+    .bullet{ display:flex; gap:10px; align-items:flex-start; color:var(--ink) }
+    .bullet i{ display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--ok); margin-top:8px }
+    .cta{ display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:8px; }
+    input, select, button{ font: inherit; color: var(--ink); }
+    .field{
+      width:100%;
+      background: var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding:12px 14px;
+      outline: none;
+    }
+    .field::placeholder{ color:#9aa2d0 }
+    .btn{
+      appearance: none; border:0;
+      background: linear-gradient(180deg, #89b6ff, #6aa1ff);
+      color: white; font-weight:700;
+      padding:12px 16px; border-radius:12px; cursor:pointer;
+      box-shadow: 0 6px 20px rgba(122,169,255,.45);
+    }
+    .btn:active{ transform: translateY(1px) }
+    .aside{ padding:22px; display:grid; gap:14px; }
+    .aside h3{ margin:0; font-size:18px; letter-spacing:.2px }
+    .aside p{ margin:0; color:var(--muted) }
+    .foot{ margin-top:32px; color:#8f94c7; font-size:13px; }
+    .pilot{ font-weight:600; color:#bcd3ff }
+    .legal{ color:#8a8fbd; font-size:12px; margin-top:6px }
+    .mark{ opacity:.9; font-weight:700 }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo"><div class="logo-mark" aria-hidden="true"></div><div>Spanstep <span class="mark">™</span></div></div>
+    </header>
+
+    <section class="card hero">
+      <div>
+        <h1>Ship big projects, gently.</h1>
+        <p class="sub">Spanstep turns anxious, fuzzy work into <strong>15–45‑minute</strong> steps, starts the next one for you, and <strong>rescues you mid‑session</strong> when you stall—then <strong>re‑packs tomorrow</strong> based on what really happened.</p>
+        <div class="bullets">
+          <div class="bullet"><i></i><div>Capacity‑aware sessions with real breaks</div></div>
+          <div class="bullet"><i></i><div>Automatic rescue when you idle or overrun</div></div>
+          <div class="bullet"><i></i><div>Daily re‑plan that respects your energy</div></div>
+        </div>
+
+        <form class="cta" action="#" method="post">
+          <input class="field" type="email" name="email" placeholder="Email" required />
+          <input class="field" type="text" name="project" placeholder="What project do you want help with?" />
+          <select class="field" name="session">
+            <option value="">Preferred session length</option>
+            <option>15 minutes</option>
+            <option>20 minutes</option>
+            <option>25 minutes</option>
+            <option>30 minutes</option>
+            <option>35 minutes</option>
+            <option>40 minutes</option>
+            <option>45 minutes</option>
+          </select>
+          <button class="btn" type="submit">Join the 7‑day pilot</button>
+        </form>
+
+        <div class="foot">
+          <span class="pilot">Private beta:</span> onboarding small cohorts weekly. We’ll only use your email to contact you about the pilot.
+          <div class="legal">Productivity tool, not medical advice.</div>
+        </div>
+      </div>
+
+      <aside class="aside card">
+        <h3>What happens in the pilot?</h3>
+        <p>• Day 0: set your capacity + session length</p>
+        <p>• Day 1: first session; we launch the right doc + timer</p>
+        <p>• Mid‑session: if you stall, we surface a 2‑minute micro‑win</p>
+        <p>• Next morning: plan auto‑repacked from what actually happened</p>
+      </aside>
+    </section>
+  </div>
+</body>
+</html>
